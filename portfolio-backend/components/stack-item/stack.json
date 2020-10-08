@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_stack_item_stacks",
+  "info": {
+    "name": "stack",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

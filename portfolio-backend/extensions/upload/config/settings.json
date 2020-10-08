@@ -1,0 +1,8 @@
+{
+    "provider": "cloudinary",
+    "providerOptions": {
+      "cloud_name": "lora2372",
+      "api_key": "632816344579797",
+      "api_secret": "ZpCBBiNRe609E2bo3iDdWJwop6k"
+    }
+  }
