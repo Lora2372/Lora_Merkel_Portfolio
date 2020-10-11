@@ -1,9 +1,10 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+import {StyledLinkBtn} from "../elements/LinkButtonElements"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 // ...GatsbyImageSharpFluid
+import {StyledHeroCenter} from "../elements/HeroElements";
 
 const query = graphql`
   {
@@ -28,7 +29,7 @@ const Hero = () => {
 
   return (
     <header className="hero">
-      <div className="section-center hero-center">
+      <StyledHeroCenter>
         <article className="hero-info">
           <div>
             <h1>I'm Sohail</h1>
@@ -79,14 +80,14 @@ const Hero = () => {
             <br />
             - 📫 How to reach me: use the link below :)
             <br />
-            <Link to="/contact" className="btn">
+            <StyledLinkBtn to="/contact">
               kontakta mig
-            </Link>
+            </StyledLinkBtn>
             <SocialLinks />
           </div>
         </article>
         <Image fluid={fluid} className="hero-img" />
-      </div>
+      </StyledHeroCenter>
     </header>
   )
 }

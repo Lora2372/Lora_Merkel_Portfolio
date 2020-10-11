@@ -2,7 +2,7 @@ import React from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import {StyledLinkCenterBtn} from "../elements/LinkButtonElements"
 
 const query = graphql`
   {
@@ -66,9 +66,9 @@ const Jobs = () => {
           })}
         </article>
       </div>
-      <Link to="/about" className="btn center-btn">
+      <StyledLinkCenterBtn to="/about">
         Mitt CV
-      </Link>
+      </StyledLinkCenterBtn>
     </section>
   )
 }

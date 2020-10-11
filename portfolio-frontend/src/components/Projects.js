@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
+import {StyledLinkCenterBtn} from "../elements/LinkButtonElements"
 const Projects = ({ projects, title, showLink }) => {
   return (
     <section className="section projects">
@@ -12,9 +12,9 @@ const Projects = ({ projects, title, showLink }) => {
         })}
       </div>
       {showLink && (
-        <Link to="/projects" className="btn center-btn">
+        <StyledLinkCenterBtn to="/projects">
           Alla projekt
-        </Link>
+        </StyledLinkCenterBtn>
       )}
     </section>
   )

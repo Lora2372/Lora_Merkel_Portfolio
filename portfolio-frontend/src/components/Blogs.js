@@ -2,22 +2,27 @@ import React from "react"
 import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
+import {StyledLinkCenterBtn} from "../elements/LinkButtonElements";
+import {StyledSection, StyledBlogCenter} from "../elements/SectionElements";
+
+
 export const Blogs = ({ blogs, title, showLink }) => {
   return (
-    <section className="section">
+    <StyledSection>
       <Title title={title} />
-      <div className="section-center blogs-center">
+      Beep
+      <StyledBlogCenter>
         {blogs.map(blog => {
           return <Blog key={blog.id} {...blog} />
         })}
-      </div>
+      </StyledBlogCenter>
       {/* If the showLink is undefined, dont show any link, otherwise show link */}
       {showLink && (
-        <Link to="/blog" className="btn center-btn">
+        <StyledLinkCenterBtn to="/blog">
           Alla artiklar
-        </Link>
+        </StyledLinkCenterBtn>
       )}
-    </section>
+    </StyledSection>
   )
 }
 export default Blogs

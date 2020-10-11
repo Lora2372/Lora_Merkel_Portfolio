@@ -1,7 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
+import { Link } from 'gatsby';
 
-export const btn = styled.div`
+
+export const StyledLinkBtn = styled(props => <Link {...props} />)`
   text-transform: uppercase;
   background: var(--clr-primary-5);
   color: var(--clr-primary-9);
@@ -16,4 +18,17 @@ export const btn = styled.div`
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
-`
+
+  &:hover {
+    color: var(--clr-primary-1);
+    background: var(--clr-primary-8);
+  }
+`;
+
+export const StyledLinkCenterBtn = styled(StyledLinkBtn)`
+  display: block;
+  width: 12rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+`;
