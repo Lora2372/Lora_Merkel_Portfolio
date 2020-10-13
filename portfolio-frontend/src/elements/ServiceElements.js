@@ -12,6 +12,20 @@ export const StyledService = styled.article`
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+
+  p{
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+
+  &:hover {
+    background: var(--clr-primary-5);
+    color: var(--clr-primary-9);
+    color: var(--clr-primary-9);
+
+
+  }
+
 `;
 
 export const StyledServiceCenter = styled(StyledSectionCenter)`
@@ -21,5 +35,9 @@ export const StyledServiceCenter = styled(StyledSectionCenter)`
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 `;

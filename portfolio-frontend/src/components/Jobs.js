@@ -4,7 +4,7 @@ import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import {StyledLinkCenterBtn} from "../elements/LinkButtonElements";
 import {StyledSection} from "../elements/SectionElements";
-import {StyledJobCenter} from "../elements/JobElements";
+import {StyledJobCenter, StyledJobBtnContainer, StyledJobBtn, StyledJobInfo, StyledJobDate} from "../elements/JobElements";
 
 const query = graphql`
   {
@@ -38,26 +38,26 @@ const Jobs = () => {
   return (
     <StyledSection>
       <Title title="erfarenhet" />
-      <div className="jobs-center">
+      <StyledJobCenter>
         {/* btn container */}
-        <div className="btn-container">
+        <StyledJobBtnContainer>
           {jobs.map((item, index) => {
             return (
-              <button
+              <StyledJobBtn
                 key={item.strapiId}
                 onClick={() => setValue(index)}
-                className={`job-btn ${index === value && "active-btn"}`}
+                // {index === value && "active-btn" ? active : ""}
               >
                 {item.company}
-              </button>
+              </StyledJobBtn>
             )
           })}
-        </div>
+        </StyledJobBtnContainer>
         {/* job info */}
-        <article className="job-info">
+        <StyledJobInfo>
           <h3>{position}</h3>
           <h4>{company}</h4>
-          <p className="job-date">{date}</p>
+          <StyledJobDate>{date}</StyledJobDate>
           {desc.map(item => {
             return (
               <div key={item.id} className="job-desc">
@@ -66,8 +66,8 @@ const Jobs = () => {
               </div>
             )
           })}
-        </article>
-      </div>
+        </StyledJobInfo>
+      </StyledJobCenter>
       <StyledLinkCenterBtn to="/about">
         Mitt CV
       </StyledLinkCenterBtn>

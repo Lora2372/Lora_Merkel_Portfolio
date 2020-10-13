@@ -4,6 +4,7 @@ import services from "../constants/services"
 import {StyledSection} from "../elements/SectionElements";
 import {StyledServiceCenter} from "../elements/ServiceElements";
 import {StyledUnderline} from "../elements/UnderlineElements";
+import {StyledService} from "../elements/ServiceElements";
 
 const Services = () => {
   return (
@@ -15,13 +16,13 @@ const Services = () => {
           const { id, icon, title, text } = service
 
           return (
-            <article key={id} className="service">
+            <StyledService key={id}>
               {icon}
               <h4>{title}</h4>
               {/* <div className="underline"></div> */}
               <StyledUnderline></StyledUnderline>
               <p>{text}</p>
-            </article>
+            </StyledService>
           )
         })}
       </StyledServiceCenter>
