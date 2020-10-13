@@ -39,8 +39,6 @@ const Hero = () => {
             <br />
             - 🌱 I’m currently learning React, Gatsby, GraphQL and Strapi
             <br />
-            - 🤔 I’m looking for help with anything frontend :)
-            <br />
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -72,8 +70,6 @@ const Hero = () => {
             >
               Styled Components
             </a>
-            <br />
-            - ⚡ Fun fact: I used to fly planes
             <br />
             - 📫 How to reach me: use the link below :)
             <br />
