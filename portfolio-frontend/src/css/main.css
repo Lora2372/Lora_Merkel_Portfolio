@@ -178,10 +178,10 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.section-title {
+/* .section-title {
   margin-bottom: 4rem;
   text-align: center;
-}
+} */
 /* .bg-grey {
   background: var(--clr-grey-10);
 } */
@@ -486,7 +486,7 @@ Hero
 Services
 ===============
 */
-.service {
+/* .service {
   background: var(--clr-white);
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
@@ -494,7 +494,7 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-}
+} */
 .service-icon {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -519,7 +519,7 @@ Services
 .service:hover .underline {
   background: var(--clr-primary-9);
 }
-@media screen and (min-width: 676px) {
+/* @media screen and (min-width: 676px) {
   .services-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -527,7 +527,7 @@ Services
     -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
-}
+} */
 @media screen and (min-width: 992px) {
   .services-center {
     grid-template-columns: 1fr 1fr 1fr;
@@ -629,9 +629,9 @@ Jobs
 Projects
 ===============
 */
-.projects {
+/* .projects {
   background: var(--clr-grey-10);
-}
+} */
 .project {
   display: grid;
   margin-bottom: 4rem;

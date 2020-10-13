@@ -2,21 +2,22 @@ import React from "react"
 import Title from "./Title"
 import Project from "./Project"
 import {StyledLinkCenterBtn} from "../elements/LinkButtonElements"
+import { StyledSectionCenter, StyledSection } from "../elements/SectionElements"
 const Projects = ({ projects, title, showLink }) => {
   return (
-    <section className="section projects">
+    <StyledSection bggrey>
       <Title title={title} />
-      <div className="section-center projects-center">
+      <StyledSectionCenter>
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
-      </div>
+      </StyledSectionCenter>
       {showLink && (
         <StyledLinkCenterBtn to="/projects">
           Alla projekt
         </StyledLinkCenterBtn>
       )}
-    </section>
+    </StyledSection>
   )
 }
 

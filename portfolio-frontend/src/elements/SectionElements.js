@@ -18,6 +18,11 @@ export const StyledSectionCenter = styled.div`
 }
 `;
 
+export const StyledSectionTitle = styled.div`
+  margin-bottom: 4rem;
+  text-align: center;
+`;
+
 export const StyledBlogCenter = styled(StyledSectionCenter)`
 @media screen and (min-width: 576px) {
     display: grid;

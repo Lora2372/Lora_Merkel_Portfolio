@@ -2,12 +2,13 @@ import React from "react"
 import Title from "./Title"
 import services from "../constants/services"
 import {StyledSection} from "../elements/SectionElements";
+import {StyledServiceCenter} from "../elements/ServiceElements";
 
 const Services = () => {
   return (
     <StyledSection bggrey>
       <Title title="Tjänster" />
-      <div className="section-center services-center">
+      <StyledServiceCenter>
         {services.map(service => {
           //  destructure
           const { id, icon, title, text } = service
@@ -21,7 +22,7 @@ const Services = () => {
             </article>
           )
         })}
-      </div>
+      </StyledServiceCenter>
     </StyledSection>
   )
 }

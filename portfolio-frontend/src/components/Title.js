@@ -1,11 +1,13 @@
 import React from "react"
+import {StyledSectionTitle} from "../elements/SectionElements";
+
 
 const Title = ({ title }) => {
   return (
-    <div className="section-title">
+    <StyledSectionTitle>
       <h2>{title || "default title"}</h2>
       <div className="underline"></div>
-    </div>
+    </StyledSectionTitle>
   )
 }
 
