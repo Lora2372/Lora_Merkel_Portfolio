@@ -32,18 +32,15 @@ const Hero = () => {
       <StyledHeroCenter>
         <article className="hero-info">
           <div>
-            <h1>I'm Sohail</h1>
+            <h1>Lora</h1>
             <div className="underline"></div>
-            <h4>Utbildningsledare inom YH och utbildare inom IT</h4>
+            <h4>Studerande på TUC Yrkeshögskola som Systemutvecklare</h4>
             - 🔭 I’m currently working on my own Portfolio site
             <br />
             - 🌱 I’m currently learning React, Gatsby, GraphQL and Strapi
             <br />
             - 🤔 I’m looking for help with anything frontend :)
             <br />
-            - 💬 Ask me about Rhodesian Ridgebacks
-            <br />
-            - 😄 Pronouns: Inquisitive, break the mold.. <br />- 💜{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
