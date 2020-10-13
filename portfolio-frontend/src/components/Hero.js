@@ -5,6 +5,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 // ...GatsbyImageSharpFluid
 import {StyledHeroCenter} from "../elements/HeroElements";
+import {StyledUnderline} from "../elements/UnderlineElements";
+import {StyledHero} from "../elements/HeroElements";
 
 const query = graphql`
   {
@@ -28,12 +30,13 @@ const Hero = () => {
   // console.log(data)
 
   return (
-    <header className="hero">
+    <StyledHero>
       <StyledHeroCenter>
         <article className="hero-info">
           <div>
             <h1>Lora</h1>
-            <div className="underline"></div>
+            <StyledUnderline></StyledUnderline>
+            {/* <div className="underline"></div> */}
             <h4>Studerande på TUC Yrkeshögskola som Systemutvecklare</h4>
             - 🔭 I’m currently working on my own Portfolio site
             <br />
@@ -81,7 +84,7 @@ const Hero = () => {
         </article>
         <Image fluid={fluid} className="hero-img" />
       </StyledHeroCenter>
-    </header>
+    </StyledHero>
   )
 }
 export default Hero

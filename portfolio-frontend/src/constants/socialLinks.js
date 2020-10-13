@@ -7,6 +7,9 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa"
 
+import {StyledSocialLink} from "../elements/SocialLinkElements";
+import {StyledSocialLinks} from "../elements/SocialLinkElements";
+
 const data = [
   {
     id: 1,
@@ -37,15 +40,15 @@ const data = [
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a href={link.url} className="social-link">
+      <StyledSocialLink href={link.url}>
         {link.icon}
-      </a>
+      </StyledSocialLink>
     </li>
   )
 })
 
 export default ({ styleClass }) => {
   return (
-    <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
+    <StyledSocialLinks>{links}</StyledSocialLinks>
   )
 }
