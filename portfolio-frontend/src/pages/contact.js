@@ -2,8 +2,13 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-import {StyledContactPage} from "../elements/ContactElements";
-import {StyledContactForm} from "../elements/ContactElements";
+import {
+          StyledContactPage,
+          StyledContactForm,
+          StyledContactFormGroup,
+          StyledContactFormControl,
+          StyledContactFormTextArea
+        } from "../elements/ContactElements";
 import {StyledSubmitBtn} from "../elements/SubmitButtonElements";
 
 const contact = () => {
@@ -14,26 +19,23 @@ const contact = () => {
         <StyledContactForm>
           <h3>kontakta mig</h3>
           <form action="https://formspree.io/f/mbjpdord" method="POST">
-            <div className="form-group">
-              <input
+            <StyledContactFormGroup>
+              <StyledContactFormControl
                 type="text"
                 placeholder="namn"
                 name="name"
-                className="form-control"
               />
-              <input
+              <StyledContactFormControl
                 type="email"
                 placeholder="epost"
                 name="email"
-                className="form-control"
               />
-              <textarea
+              <StyledContactFormTextArea
                 name="message"
                 rows="5"
                 placeholder="meddelande"
-                className="form-control"
-              ></textarea>
-            </div>
+              ></StyledContactFormTextArea>
+            </StyledContactFormGroup>
             <StyledSubmitBtn type="submit">
               Kontakta mig
             </StyledSubmitBtn>

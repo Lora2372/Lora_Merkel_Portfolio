@@ -7,7 +7,16 @@ import { Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
 import {StyledLinkBtn, StyledLinkCVBtn} from "../elements/LinkButtonElements";
-import downloadFile from "../../static/LoraMerkelCV.pdf"
+import downloadFile from "../../static/LoraMerkelCV.pdf";
+
+import {
+          StyledAboutPage,
+          StyledAboutImg,
+          StyledAboutStackSpan,
+          StyledAboutCenter,
+          StyledAboutText
+        } from "../elements/AboutElements";
+
 // ...GatsbyImageSharpFluid
 const About = ({
   data: {
@@ -19,16 +28,16 @@ const About = ({
   return (
     <Layout>
       <SEO title="CV" description="Lora's CV" />
-      <section className="about-page">
-        <div className="section-center about-center">
-          <Image fluid={image.childImageSharp.fluid} className="about-img" />
-          <article className="about-text">
+      <StyledAboutPage>
+        <StyledAboutCenter>
+          <StyledAboutImg fluid={image.childImageSharp.fluid} />
+          <StyledAboutText>
             {/* <Title title={title} />
                 <p>{info}</p> */}
             <ReactMarkdown source={info} />
-            <div className="about-stack">
+            <div>
               {stack.map(item => {
-                return <span key={item.id}>{item.title}</span>
+                return <StyledAboutStackSpan key={item.id}>{item.title}</StyledAboutStackSpan>
               })}
             </div>
 
@@ -41,10 +50,10 @@ const About = ({
             <StyledLinkBtn to="/contact">
               kontakta mig
             </StyledLinkBtn>
-          </article>
-        </div>
+          </StyledAboutText>
+        </StyledAboutCenter>
         <></>
-      </section>
+      </StyledAboutPage>
     </Layout>
   )
 }

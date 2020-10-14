@@ -68,7 +68,7 @@ const Jobs = () => {
           <StyledJobDate>{date}</StyledJobDate>
           {desc.map(item => {
             return (
-              <StyledJobDesc key={item.id} className="job-desc">
+              <StyledJobDesc key={item.id}>
                 <StyledJobIcon>
                   <FaAngleDoubleRight />
                 </StyledJobIcon>

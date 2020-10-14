@@ -5,6 +5,8 @@ import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 // ...GatsbyImageSharpFluid
 
+import {StyledBlogPage} from "../elements/BlogElements";
+
 const Blog = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
@@ -13,9 +15,9 @@ const Blog = ({
   return (
     <Layout>
       <SEO title="Bloggen" description="Bloggsidan" />
-      <section className="blog-page">
+      <StyledBlogPage>
         <Blogs blogs={blogs} title="Alla artiklar" />
-      </section>
+      </StyledBlogPage>
     </Layout>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "gatsby-image";
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
 import {
         StyledProject, 
@@ -17,7 +16,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
     <StyledProject>
       {/* if image is not supplied, instead of breaking, dont show any image */}
       {image && (
-        <Image fluid={image.childImageSharp.fluid} className="project-img" />
+        <StyledProjectImg fluid={image.childImageSharp.fluid} />
       )}
       <StyledProjectInfo>
         <StyledProjectNumber>0{index + 1}.</StyledProjectNumber>
@@ -29,7 +28,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
             return <span key={item.id}>{item.title}</span>
           })}
         </StyledProjectStack>
-        <div className="project-links">
+        <div>
           <StyledProjectIcon href={github}>
             <FaGithubSquare/>
           </StyledProjectIcon>

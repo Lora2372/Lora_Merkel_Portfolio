@@ -13,10 +13,10 @@ import {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <StyledSidebar className={`sidebar ${isOpen ? "show-sidebar" : ""} `}>
-      <button className="close-btn" onClick={toggleSidebar}>
+      <StyledSidebarCloseBtn onClick={toggleSidebar}>
         <FaTimes />
-      </button>
-      <div className="side-container">
+      </StyledSidebarCloseBtn>
+      <div>
         <Links styleClass={`${isOpen ? "sidebar-links" : ""}`} />
         <SocialLinks styleClass={`${isOpen ? "sidebar-icons" : ""}`} />
       </div>

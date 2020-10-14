@@ -7,7 +7,8 @@ import SocialLinks from "../constants/socialLinks"
 import {
           StyledHero,
           StyledHeroCenter,
-          StyledHeroInfo
+          StyledHeroInfo,
+          StyledHeroImage
         } from "../elements/HeroElements";
 import {StyledUnderline} from "../elements/UnderlineElements";
 
@@ -39,7 +40,6 @@ const Hero = () => {
           <div>
             <h1>Lora</h1>
             <StyledUnderline />
-            {/* <div className="underline"></div> */}
             <h4>Studerande på TUC Yrkeshögskola som Systemutvecklare</h4>
             - 🔭 I’m currently working on my own Portfolio site
             <br />
@@ -85,7 +85,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </StyledHeroInfo>
-        <Image fluid={fluid} className="hero-img" />
+        <StyledHeroImage fluid={fluid} />
       </StyledHeroCenter>
     </StyledHero>
   )

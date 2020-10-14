@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'gatsby';
 import {StyledSectionCenter} from "../elements/SectionElements";
-
+import { FaCode, FaSketch, FaAndroid } from "react-icons/fa";
 
 export const StyledService = styled.article`
   background: var(--clr-white);
@@ -26,6 +25,21 @@ export const StyledService = styled.article`
 
   }
 
+`;
+
+export const StyledServiceIconOne = styled(props => (<FaCode {...props}/>))`
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+`;
+
+export const StyledServiceIconTwo = styled(props => (<FaSketch {...props}/>))`
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+`;
+
+export const StyledServiceIconThree = styled(props => (<FaAndroid {...props}/>))`
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const StyledServiceCenter = styled(StyledSectionCenter)`

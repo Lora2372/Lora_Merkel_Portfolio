@@ -33,6 +33,18 @@ export const StyledFooter = styled.footer`
             } 
         }
     }
+    
+    p:first-of-type {
+        display: inline-block;
+        background: var(--clr-grey-9);
+        color: var(--clr-grey-5);
+        margin-right: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: var(--radius);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+    }
 `;
 
 export const StyledFooterSocialLinks = styled.ul `

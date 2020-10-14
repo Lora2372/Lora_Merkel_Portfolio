@@ -18,7 +18,7 @@ const Navbar = ({ toggleSidebar }) => {
       <StyledNavbarCenter id="top">
         <StyledNavbarHeader>
           <img src={logo} alt="logo" />
-          <StyledNavbarToggleButton type="button" className="toggle-btn" onClick={toggleSidebar}>
+          <StyledNavbarToggleButton type="button" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </StyledNavbarToggleButton>
         </StyledNavbarHeader>

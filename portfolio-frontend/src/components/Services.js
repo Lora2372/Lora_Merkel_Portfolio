@@ -19,8 +19,7 @@ const Services = () => {
             <StyledService key={id}>
               {icon}
               <h4>{title}</h4>
-              {/* <div className="underline"></div> */}
-              <StyledUnderline></StyledUnderline>
+              <StyledUnderline />
               <p>{text}</p>
             </StyledService>
           )

@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import Image from "gatsby-image";
+import React from "react";
+
+export const StyledProjectPage = styled.section`
+    background: var(--clr-grey-10);
+    min-height: calc(100vh - 5rem - 9rem);
+`;
 
 export const StyledProject = styled.article`
   display: grid;
@@ -9,12 +16,25 @@ export const StyledProject = styled.article`
     align-items: center;
   }
 `;
-
-export const StyledProjectImg = styled.image`
+export const StyledProjectImg = styled(props => <Image{...props} />)`
    border-top-left-radius: var(--radius);
    border-top-right-radius: var(--radius);
    height: 19rem;
    z-index: 1;
+
+
+   &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
+    opacity: 0.85;
+    transition: var(--transition);
+
+   }
    
    @media screen and (min-width: 576px) {
        height: 19rem;
