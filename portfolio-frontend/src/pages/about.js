@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
-import {StyledLinkBtn} from "../elements/LinkButtonElements";
+import {StyledLinkBtn, StyledLinkCVBtn} from "../elements/LinkButtonElements";
 import downloadFile from "../../static/LoraMerkelCV.pdf"
 // ...GatsbyImageSharpFluid
 const About = ({
@@ -18,7 +18,7 @@ const About = ({
   const { info, stack, title, image } = nodes[0]
   return (
     <Layout>
-      <SEO title="CV" description="Sohails CV" />
+      <SEO title="CV" description="Lora's CV" />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
@@ -32,12 +32,12 @@ const About = ({
               })}
             </div>
 
-            <StyledLinkBtn>
-              <a href={downloadFile} download>
+              
+              <StyledLinkCVBtn href={downloadFile} download>
                 Ladda ner fullständig CV
-              </a>
               {` `}
-            </StyledLinkBtn>
+              </StyledLinkCVBtn>
+            
             <StyledLinkBtn to="/contact">
               kontakta mig
             </StyledLinkBtn>

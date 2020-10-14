@@ -19,4 +19,9 @@ export const StyledContactForm = styled.article`
   &:hover {
     box-shadow: var(--dark-shadow);
   }
+
+  h3{
+    padding-top: 1.25rem;
+    color: var(--clr-grey-5);
+  }
 `;

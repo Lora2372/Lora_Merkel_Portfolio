@@ -6,6 +6,8 @@ import SEO from "../components/SEO"
 import {StyledLinkCenterBtn} from "../elements/LinkButtonElements"
 import {StyledSectionCenter} from "../elements/SectionElements";
 
+import {StyledBlogTemplate} from "../elements/BlogTemplateElements";
+
 const ComponentName = ({ data }) => {
   console.log(data)
   const { content, title, desc } = data.blog
@@ -13,7 +15,7 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={desc} />
-      <section className="blog-template">
+      <StyledBlogTemplate>
         <StyledSectionCenter>
           <article className="blog-content">
             <ReactMarkdown source={content} />
@@ -22,7 +24,7 @@ const ComponentName = ({ data }) => {
             Alla artiklar
           </StyledLinkCenterBtn>
         </StyledSectionCenter>
-      </section>
+      </StyledBlogTemplate>
     </Layout>
   )
 }

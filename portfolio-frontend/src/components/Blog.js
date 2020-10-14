@@ -2,24 +2,31 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+
+import {
+          StyledBlog,
+          StyledBlogCard,
+          StyledBlogFooter
+        } from "../elements/BlogElements";
+
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
   return (
     <Link to={`/blogs/${slug}`} key={id}>
-      <article className="blog">
+      <StyledBlog>
         {/* if image is not supplied, instead of breaking, dont show any image */}
         {image && (
           <Image fluid={image.childImageSharp.fluid} className="blog-img" />
         )}
-        <div className="blog-card">
+        <StyledBlogCard>
           {/* if title is not supplied, set a defualt title */}
           <h4>{title || "Ariklar"}</h4>
           <p>{desc}</p>
-          <div className="blog-footer">
+          <StyledBlogFooter>
             <p>{category}</p>
             <p>{date}</p>
-          </div>
-        </div>
-      </article>
+          </StyledBlogFooter>
+        </StyledBlogCard>
+      </StyledBlog>
     </Link>
   )
 }

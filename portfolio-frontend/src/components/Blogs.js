@@ -10,7 +10,6 @@ export const Blogs = ({ blogs, title, showLink }) => {
   return (
     <StyledSection>
       <Title title={title} />
-      Beep
       <StyledBlogCenter>
         {blogs.map(blog => {
           return <Blog key={blog.id} {...blog} />

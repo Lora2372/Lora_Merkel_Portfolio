@@ -1,34 +1,44 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import Image from "gatsby-image";
+import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
+import {
+        StyledProject, 
+        StyledProjectImg, 
+        StyledProjectInfo, 
+        StyledProjectNumber, 
+        StyledProjectDesc,
+        StyledProjectStack,
+        StyledProjectIcon
+} from "../elements/ProjectElements";
+
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
-    <article className="project">
+    <StyledProject>
       {/* if image is not supplied, instead of breaking, dont show any image */}
       {image && (
         <Image fluid={image.childImageSharp.fluid} className="project-img" />
       )}
-      <div className="project-info">
-        <span className="project-number">0{index + 1}.</span>
+      <StyledProjectInfo>
+        <StyledProjectNumber>0{index + 1}.</StyledProjectNumber>
         {/* if title is not supplied, set a defualt title */}
         <h3>{title || "Projekt"}</h3>
-        <p className="project-description">{description}</p>
-        <div className="project-stack">
+        <StyledProjectDesc>{description}</StyledProjectDesc>
+        <StyledProjectStack>
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
           })}
-        </div>
+        </StyledProjectStack>
         <div className="project-links">
-          <a href={github}>
-            <FaGithubSquare className="project-icon" />
-          </a>
-          <a href={url}>
-            <FaShareSquare className="project-icon" />
-          </a>
+          <StyledProjectIcon href={github}>
+            <FaGithubSquare/>
+          </StyledProjectIcon>
+          <StyledProjectIcon href={url}>
+            <FaShareSquare />
+          </StyledProjectIcon>
         </div>
-      </div>
-    </article>
+      </StyledProjectInfo>
+    </StyledProject>
   )
 }
 

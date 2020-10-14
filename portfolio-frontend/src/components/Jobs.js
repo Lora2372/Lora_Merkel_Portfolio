@@ -4,7 +4,15 @@ import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import {StyledLinkCenterBtn} from "../elements/LinkButtonElements";
 import {StyledSection} from "../elements/SectionElements";
-import {StyledJobCenter, StyledJobBtnContainer, StyledJobBtn, StyledJobInfo, StyledJobDate} from "../elements/JobElements";
+import {
+          StyledJobCenter,
+          StyledJobBtnContainer,
+          StyledJobBtn,
+          StyledJobInfo,
+          StyledJobDate,
+          StyledJobDesc,
+          StyledJobIcon
+        } from "../elements/JobElements";
 
 const query = graphql`
   {
@@ -60,10 +68,12 @@ const Jobs = () => {
           <StyledJobDate>{date}</StyledJobDate>
           {desc.map(item => {
             return (
-              <div key={item.id} className="job-desc">
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+              <StyledJobDesc key={item.id} className="job-desc">
+                <StyledJobIcon>
+                  <FaAngleDoubleRight />
+                </StyledJobIcon>
                 <p>{item.name}</p>
-              </div>
+              </StyledJobDesc>
             )
           })}
         </StyledJobInfo>

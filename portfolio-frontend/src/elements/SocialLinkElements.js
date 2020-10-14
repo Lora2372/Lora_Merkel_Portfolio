@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const StyledSocialLink = styled.a`
   font-size: 1.75rem;
+  text-decoration:none;
   color: var(--clr-grey-1);
   transition: var(--transition);
 

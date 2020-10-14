@@ -75,3 +75,20 @@ export const StyledJobInfo = styled.article`
 export const StyledJobDate = styled.p`
   letter-spacing: var(--spacing);
 `;
+
+export const StyledJobDesc = styled.div`
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+
+    p{
+      margin-bottom: 0;
+      color: var(--clr-grey-3);
+    }
+`;
+
+export const StyledJobIcon = styled.div`
+    color: var(--clr-primary-5);
+`;

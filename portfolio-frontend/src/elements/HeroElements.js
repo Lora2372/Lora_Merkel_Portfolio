@@ -23,3 +23,11 @@ export const StyledHeroImage = styled.article`
   background: var(--clr-primary-10);
   position: relative;
 `;
+
+export const StyledHeroInfo = styled.article`
+    background: var(--clr-primary-10);
+
+    h4{
+      color: var(--clr-grey-5);
+    }
+`;

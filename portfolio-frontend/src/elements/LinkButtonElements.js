@@ -25,6 +25,10 @@ export const StyledLinkBtn = styled(props => <Link {...props} />)`
   }
 `;
 
+export const StyledLinkCVBtn = styled.a`
+
+`;
+
 export const StyledLinkCenterBtn = styled(StyledLinkBtn)`
   display: block;
   width: 12rem;
