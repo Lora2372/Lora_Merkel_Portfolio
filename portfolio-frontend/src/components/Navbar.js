@@ -1,7 +1,8 @@
 import React from "react"
 import logo from "../assets/logo.svg"
-import { FaAlignRight } from "react-icons/fa"
+import { FaAlignRight, FaTimes } from "react-icons/fa"
 import PageLinks from "../constants/links"
+import styled from "styled-components";
 
 import {
         StyledNavbar,
@@ -12,16 +13,23 @@ import {
       
       } from "../elements/NavbarElements";
 
+      import {StyledSidebarCloseBtn} from "../elements/SidebarElements";
+
 const Navbar = ({ toggleSidebar }) => {
+  console.log(toggleSidebar);
+  console.log("Hej hej");
   return (
     <StyledNavbar>
       <StyledNavbarCenter id="top">
         <StyledNavbarHeader>
           <img src={logo} alt="logo" />
-          <StyledNavbarToggleButton type="button" onClick={toggleSidebar}>
-            <FaAlignRight></FaAlignRight>
+          <StyledNavbarToggleButton className="Hej"  onClick={toggleSidebar}>
+            
+            <FaAlignRight />
           </StyledNavbarToggleButton>
+
         </StyledNavbarHeader>
+        
         
         <StyledNavbarLinks>
           <PageLinks />
@@ -32,3 +40,16 @@ const Navbar = ({ toggleSidebar }) => {
 }
 
 export default Navbar
+
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;

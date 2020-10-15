@@ -222,7 +222,7 @@ Sidebar
 Sidebar Animation
 ===============
 */
-.sidebar-links li {
+/* .sidebar-links li {
   animation: slideRight 0.5s ease-in-out 0.3s forwards;
 }
 .sidebar-links li:nth-of-type(1) {
@@ -239,18 +239,9 @@ Sidebar Animation
 }
 .sidebar-links li:nth-of-type(5) {
   animation-delay: 1.25s;
-}
-@keyframes slideRight {
-  0% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.sidebar-icons li {
+} */
+
+/* .sidebar-icons li {
   opacity: 0;
   animation: slideUp 0.5s ease-in-out 0.3s forwards;
 }
@@ -278,7 +269,7 @@ Sidebar Animation
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 /*
 =============== 

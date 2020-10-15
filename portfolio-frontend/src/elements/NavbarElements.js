@@ -69,7 +69,7 @@ export const StyledNavbarLinks = styled.ul`
 
 export const StyledNavbarToggleButton = styled.button`
     font-size: 2rem;
-    background: transparent;
+    background: red;
     border-color: transparent;
     color: var(--clr-primary-5);
     cursor: pointer;

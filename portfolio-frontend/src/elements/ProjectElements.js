@@ -5,11 +5,19 @@ import React from "react";
 export const StyledProjectPage = styled.section`
     background: var(--clr-grey-10);
     min-height: calc(100vh - 5rem - 9rem);
+
+
+    
 `;
 
 export const StyledProject = styled.article`
   display: grid;
   margin-bottom: 4rem;
+
+  &:hover ${StyledProjectImg}:after {
+    opacity: 0;  
+  }
+  
 
   @media screen and (min-width: 992px) {
     grid-template-columns: repeat(12, 1fr);
@@ -34,7 +42,11 @@ export const StyledProjectImg = styled(props => <Image{...props} />)`
     opacity: 0.85;
     transition: var(--transition);
 
+
+
    }
+
+ 
    
    @media screen and (min-width: 576px) {
        height: 19rem;
