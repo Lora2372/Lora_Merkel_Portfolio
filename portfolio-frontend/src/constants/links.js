@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import {StyledNavbarLinks} from "../elements/NavbarElements";
 import {StyledSidebarLinks} from "../elements/SidebarElements";
 
 const data = [
@@ -41,7 +42,7 @@ const tempLinks = data.map(link => {
 // I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
-    return styleClass ? ( <StyledSidebarLinks>{tempLinks}</StyledSidebarLinks> ) : ( <ul>
+  return styleClass ? ( <StyledSidebarLinks>{tempLinks}</StyledSidebarLinks> ) : ( <StyledNavbarLinks>
     {tempLinks}
-  </ul>)
+  </StyledNavbarLinks>)
 }

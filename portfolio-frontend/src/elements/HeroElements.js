@@ -3,12 +3,19 @@ import {StyledSectionCenter} from "./SectionElements";
 import Image from "gatsby-image";
 import React from "react";
 
+import {StyledUnderline} from "../elements/UnderlineElements";
+
 export const StyledHero = styled.header`
   margin-top: -5rem;
   padding-top: 5rem;
   height: 100vh;
   background: var(--clr-primary-10);
   position: relative;
+
+  ${StyledUnderline} {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  }
 
 
   @media screen and (min-width: 992px) {
@@ -51,6 +58,8 @@ export const StyledHeroImage = styled(props => <Image{...props} />)`
   background: var(--clr-primary-10);
   position: relative;
 
+  display: none;
+
   @media screen and (min-width: 992px) {
     display: block;
     grid-row: 1;
@@ -67,9 +76,12 @@ export const StyledHeroInfo = styled.article`
       color: var(--clr-grey-5);
     }
 
+    grid-row: 1/1;
+    grid-column: 1 / span 8;
+
     @media screen and (min-width: 992px) {
       grid-row: 1/1;
-      grid-column: 1 / 2;
+      grid-column: 1 / span 7;
     }
 
     @media screen and (min-width: 1170px) {

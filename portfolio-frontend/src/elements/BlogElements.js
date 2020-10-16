@@ -5,6 +5,10 @@ import React from "react";
 export const StyledBlogPage = styled.section`
       background: var(--clr-grey-10);
       min-height: calc(100vh - 5rem - 9rem);
+
+      ${StyledBlog}{
+        background: var(--clr-white);
+      }
 `;
 
 export const StyledBlog = styled.article`

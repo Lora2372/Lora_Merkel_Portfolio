@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Image from "gatsby-image";
 
-import {StyledSectionCenter} from "./SectionElements";
+import {StyledSectionCenter, StyledSectionTitle} from "./SectionElements";
+import {StyledUnderline} from "./UnderlineElements";
 
 export const StyledAboutPage = styled.section`
       padding: 7rem 0;
@@ -13,6 +14,20 @@ export const StyledAboutPage = styled.section`
 
 export const StyledAboutText = styled.article`
         grid-column: 6 / -1;
+
+        ${StyledSectionTitle}{
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        ${StyledUnderline}{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        p{
+            line-height: 2;
+        }
 `;
 
 export const StyledAboutCenter = styled(StyledSectionCenter)`

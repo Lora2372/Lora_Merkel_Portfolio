@@ -20,7 +20,10 @@ export const StyledService = styled.article`
   &:hover {
     background: var(--clr-primary-5);
     color: var(--clr-primary-9);
-    color: var(--clr-primary-9);
+
+    p{
+      color: var(--clr-primary-9);
+    }
 
 
   }

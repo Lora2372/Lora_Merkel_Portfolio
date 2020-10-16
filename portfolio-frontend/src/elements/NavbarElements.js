@@ -30,7 +30,7 @@ export const StyledNavbarCenter = styled.div`
 
 export const StyledNavbarHeader = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 
     img{
@@ -42,6 +42,8 @@ export const StyledNavbarLinks = styled.ul`
     width: 90vw;
     max-width: 1170px;
     margin: 0 auto;
+
+    display: none;
 
     @media screen and (min-width: 768px) {
         display: flex;
@@ -69,7 +71,7 @@ export const StyledNavbarLinks = styled.ul`
 
 export const StyledNavbarToggleButton = styled.button`
     font-size: 2rem;
-    background: red;
+    background: transparent;
     border-color: transparent;
     color: var(--clr-primary-5);
     cursor: pointer;

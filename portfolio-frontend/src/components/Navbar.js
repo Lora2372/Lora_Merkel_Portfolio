@@ -16,13 +16,12 @@ import {
       import {StyledSidebarCloseBtn} from "../elements/SidebarElements";
 
 const Navbar = ({ toggleSidebar }) => {
-  console.log(toggleSidebar);
-  console.log("Hej hej");
+
   return (
     <StyledNavbar>
       <StyledNavbarCenter id="top">
         <StyledNavbarHeader>
-          <img src={logo} alt="logo" />
+
           <StyledNavbarToggleButton className="Hej"  onClick={toggleSidebar}>
             
             <FaAlignRight />
@@ -31,9 +30,8 @@ const Navbar = ({ toggleSidebar }) => {
         </StyledNavbarHeader>
         
         
-        <StyledNavbarLinks>
+
           <PageLinks />
-        </StyledNavbarLinks>
       </StyledNavbarCenter>
     </StyledNavbar>
   )

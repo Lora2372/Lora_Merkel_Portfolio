@@ -10,20 +10,7 @@ export const StyledProjectPage = styled.section`
     
 `;
 
-export const StyledProject = styled.article`
-  display: grid;
-  margin-bottom: 4rem;
 
-  &:hover ${StyledProjectImg}:after {
-    opacity: 0;  
-  }
-  
-
-  @media screen and (min-width: 992px) {
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-  }
-`;
 export const StyledProjectImg = styled(props => <Image{...props} />)`
    border-top-left-radius: var(--radius);
    border-top-right-radius: var(--radius);
@@ -85,6 +72,35 @@ export const StyledProjectInfo = styled.div`
     grid-row: 1 / 1;
   }
 `;
+
+
+export const StyledProject = styled.article`
+  display: grid;
+  margin-bottom: 4rem;
+
+  &:hover ${StyledProjectImg}:after {
+    opacity: 0;  
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+  }
+  /* @media screen and (min-width: 992px) { */
+  &:nth-of-type(even) ${StyledProjectImg} {
+    grid-column: 5 / -1;
+    grid-row: 1 / 1;
+  }
+  &:nth-of-type(even) ${StyledProjectInfo} {
+    grid-column: 2 / span 7;
+    grid-row: 1 / 1;
+    text-align: left;
+    /* } */
+  }
+  
+`;
+
 
 export const StyledProjectNumber = styled.span`
   display: inline-block;
