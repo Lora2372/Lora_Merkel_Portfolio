@@ -21,7 +21,6 @@ export const StyledSectionCenter = styled.div`
 export const StyledSectionTitle = styled.div`
   margin-bottom: 4rem;
   text-align: center;
-  background-color: pink;
 `;
 
 export const StyledBlogCenter = styled(StyledSectionCenter)`
