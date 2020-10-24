@@ -2,14 +2,7 @@ import styled from "styled-components";
 import Image from "gatsby-image"
 import React from "react";
 
-export const StyledBlogPage = styled.section`
-      background: var(--clr-grey-10);
-      min-height: calc(100vh - 5rem - 9rem);
 
-      ${StyledBlog}{
-        background: var(--clr-white);
-      }
-`;
 
 export const StyledBlog = styled.article`
     display: block;
@@ -30,6 +23,16 @@ export const StyledBlog = styled.article`
         grid-template-rows: auto 1fr;
     }
 `;
+
+export const StyledBlogPage = styled.section`
+      background: var(--clr-grey-10);
+      min-height: calc(100vh - 5rem - 9rem);
+
+      ${StyledBlog}{
+        background: var(--clr-white);
+      }
+`;
+
 
 export const StyledBlogCard = styled.div`
     display: grid;

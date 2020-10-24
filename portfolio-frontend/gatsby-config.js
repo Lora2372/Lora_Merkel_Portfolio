@@ -18,6 +18,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-styled-components`,
+    `babel-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
